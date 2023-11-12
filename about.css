@@ -1,0 +1,262 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(bg.png);
+    background-color: gainsboro;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+    background-size: contain;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container{
+    width: 100%;
+
+}
+.breadcrumbs ul{
+    display: flex;
+    justify-content: left;
+    margin-bottom: -70px;
+    padding: 10px;
+}
+.breadcrumbs ul li{
+    list-style-type: none;
+    padding: 5px;
+    font-size: 18px;
+    color: gray;
+    display: block;
+}
+.breadcrumbs ul li a{
+    text-decoration: none;
+    color: gray;
+
+}
+.breadcrumbs ul li :last-child{
+    font-weight: bold;
+ 
+}
+.breadcrumbs ul li a:hover{
+    color: black;
+}
+.breadcrumbs ul li a:active{
+    color: blueviolet;
+}
+
+.title{
+    color: gray;
+    font-size: 40px;
+    line-height: 50px;
+    padding: 30px 20px 70px;
+    text-align: center;
+    font-weight: bold;
+    background-color: whitesmoke;
+ 
+   
+   
+}
+.container .header,
+.container .body,
+.container .indicator
+{
+    margin: 0 auto;
+    max-width: 850px;
+    width: 100%;
+ 
+   
+    
+}
+
+.container .header{
+    position: relative;
+    display: flex;
+    height: 60px;
+    width: 100%;
+    margin-top: -60px;
+    text-align: center;
+    z-index: 2;
+
+}
+.container .header div{
+    width: 25%;
+    text-align: center;
+    padding: 15px 0px;
+    color: gray;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    user-select: none;
+    transition: color 0.3s ease-in-out;
+}
+.container .header div:hover{
+    background-color: gainsboro;
+    border-radius: 10px 10px 0px 0px;
+}
+.container .header div.active{
+    color: black;
+}
+.container .body{
+    position: relative;
+}
+.container .body > div {
+    position: absolute;
+    width: 100%;
+    padding: 2px 20px 10px;
+    top: -100vh;
+    opacity: 0;
+    box-shadow: 0 1px 15px -10px rgba(0,0,0.2);
+}
+.page1 > div > *{
+    margin: 9.5px;
+}
+.page1 div{
+    border-bottom: 1px black dotted;
+}
+.page2 div {
+    border-bottom: 1px black dotted;
+    margin-bottom: 20px;
+}
+.page2 div *{
+    margin: 15px;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+.page3 >* , .page4 >* {
+    padding: 10px 30px 10px;
+    margin: 20px;
+}
+.page3 ul li , .page4 ul li{
+    padding: 20px 0px;
+    font-size: 20px;
+    list-style-type:square;
+    letter-spacing: 3px;
+
+}
+.body i{
+    font-size: 20px;
+    padding: 5px;
+}
+.body h2{
+    padding: 8px 0px;
+    color: gray;
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.container .body > div.active{
+    top: 0;
+    opacity: 1;
+    transition: top 2ms ease-in-out 0ms ;
+    transition: opacity 500ms ease-in-out 0ms;
+}
+.body :nth-child(3){
+    text-transform: uppercase;
+}
+.blorance{
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    text-align: center;
+    font-size: 16px;
+    padding: 5px;
+   
+}
+.fa-heart {
+    color: red;
+}
+.blorance a {
+    color: blue;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+.blorance a:hover {
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 600px ){
+    body{
+        background-image: none;
+    }
+    .breadcrumbs ul li{
+        list-style-type: none;
+        padding: 2px;
+        font-size: 14px;
+    }
+    .title{
+        font-size: 30px;
+        line-height: 50px;
+        padding: 70px 20px 20px;
+     
+       
+       
+    }
+
+    .container .header,
+.container .body,
+.container .indicator
+{
+    margin: 0 auto;
+    width: 100vw;
+}
+.container.header{
+    padding: 0px 10px;
+}
+
+.container .header div{
+    font-size: 18px;
+    height: 30px;
+    width: 35%;
+
+}
+.container .body > div {
+    box-shadow: none;
+}
+.page4{
+    display: none;
+}
+.workedin{
+    display: none;
+}
+
+.page3 ul li , .page4 ul li{
+    padding:10px;
+    font-size: 16px;
+    list-style-type:square;
+    letter-spacing: 1px;
+
+}
+.page1 div *{
+    margin: 2.5px;
+
+}
+.page1 h3{
+font-size: 16px;
+}
+.page2 div *{
+    margin: 10px;
+    line-height: 22px;
+    margin-bottom: 0px;
+
+
+}
+.page2 div  > *{
+font-size: 14px;
+}
+
+.blorance{
+    border-top: black solid 1px;
+    text-align: center;
+    font-size: 14px;
+    padding: 5px 0px;
+   
+}
+
+}
+
+
+

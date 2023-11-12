@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Ayas Asraf</title>
+    <link rel="stylesheet" href="about.css">
+    <script src="https://kit.fontawesome.com/1abd4bbf42.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+     
+    <div class="container">
+        <div class="breadcrumbs">
+            <ul>
+                <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><i class="fa-solid fa-greater-than"></i></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+        <div class="title">ABOUT</div>
+        <div class="header">
+            <div class="active">Experience</div>
+            <div>Education</div>
+            <div>Skill</div>
+            <div class="workedin">WorkedIn</div>
+        </div>
+        <div class="indicator">
+            <div></div>
+        </div>
+        <div class="body">
+            <div  class="page1 active">
+                <h2>Experience</h2>
+                <div>
+                    <h3> <i class="far fa-building"></i> MEDIA B ADVERTISING</h3>
+                    <h4> <i class="fa-solid fa-location-dot"></i>Kollam , Kerala</h4>
+                    <p><i class="fas fa-calendar-alt"></i> 6 Months</p>
+                </div>
+                <div>
+                    <h3> <i class="far fa-building"></i> SBSOL DIGITAL PVT LTD.</h3>
+                    <h4> <i class="fa-solid fa-location-dot"></i>Kochi , Kerala</h4>
+                    <p><i class="fas fa-calendar-alt"></i> 1 months</p>
+                </div>
+                <div>
+                    <h3><i class="far fa-building"></i>JUNCTION HACK YOUTUBE CHANNEL</h3>
+                    <h4> <i class="fa-solid fa-location-dot"></i>Kollam , Kerala</h4>
+                    <p><i class="fas fa-calendar-alt"></i>24 months</p>
+                </div>
+                <div>
+                    <h3><i class="far fa-building"></i> TOX INDIA MEDIA</h3>
+                    <h4> <i class="fa-solid fa-location-dot"></i>Kochi , Kerala</h4>
+                    <p><i class="fas fa-calendar-alt"></i> 24 months</p>
+                </div>
+            </div>
+            <div class="page2">
+                <h2>Education</h2>
+                <div>
+                    <h4>2022 </h4>
+                    <p>KERALA COMPUTER
+                        SAKSHARATHA MISSION</p>
+                    <h4>MASTERS IN ANIMATION AND
+                        VISUAL EFFECTS ENGINEERING</h4>
+                </div><br>
+                <div>
+                    <h4>2019</h4>
+                    <p>KITES SOFTWARE,
+                        PALARIVATTOM</p>
+                    <h4>PMKVY CERTIFICATE COURSE IN
+                        GRAPHIC DESIGN AND
+                        ANIMATION</h4>
+                </div><br>
+                <div>
+                    <h4>2019</h4>
+                    <p>IMAGE INSTITUTE OF CREATIVE
+                        EDUCATION, PALARIVATTOM</p>
+                    <h4>HIGHER DIPLOMA IN GRAPHIC
+                        DESIGN AND ANIMATION</h4>
+                </div><br>
+            </div>
+            <div class="page3">
+                <h2>Skill</h2>
+                <ul>
+                    <li>Adobe Photoshop</li>
+                    <li>Adobe Illustrator</li>
+                    <li>Adobe Indesign</li>
+                    <li>Adobe Lightroom</li>
+                    <li>Adobe Premiere Pr0</li>
+                    <li>Adobe After Effects</li>
+                </ul>
+            </div>
+            <div class="page4">
+                <h2>WorkedIn</h2>
+                <ul>
+                    <li>ADVANCED GRAPHIC DESIGN</li>
+                    <li>VISUAL DESIGN & STORYTELLING</li>
+                    <li>INFOGRAPHICS DESIGN</li>
+                    <li>TYPOGRAPHY</li>
+                    <li>MEDIA PRODUCTION</li>
+                    <li>DYNAMIC VISUAL DESIGN</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="space"></div>
+    <div class="blorance"> Made by <a href="https://www.instagram.com/blorencedesign/" target="_blank">BLORANCE</a> | Copyright <i class="fa-regular fa-copyright"></i> 2023</div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let container = document.querySelector(".container");
+            let header = document.querySelector(".header");
+            let menuItem = container.querySelectorAll(".header > div");
+            let tabBody = container.querySelector(".body");
+            let tabBodyElements = container.querySelectorAll(".body > div");
+            let indicator = container.querySelector(".indicator > div");
+
+            menuItem.forEach((tab , index ) => {
+                tab.addEventListener("click", function () {
+                    header.querySelector(".active").classList.remove("active");
+                    tab.classList.add("active");
+                    indicator.style.left = '${index * 25}%';
+
+                    tabBody.querySelector(".active").classList.remove("active");
+                    tabBodyElements[index].classList.add("active");
+
+                }); 
+            });
+
+
+
+
+
+        });
+
+    </script>
+    
+</body>
+</html>
